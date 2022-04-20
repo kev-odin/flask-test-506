@@ -16,7 +16,8 @@ def owner():
 
 @app.route("/datetime")
 def current_time():
-    return f"Current time: {datetime.datetime.now()}"
+    now = datetime.datetime.now()
+    return f'Current: {now.strftime("%m/%d/%Y, %H:%M:%S")}' 
 
 
 if __name__ == "__main__":
